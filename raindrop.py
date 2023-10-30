@@ -3,10 +3,10 @@ import pygame
 GROUND = 600
 
 class Raindrop(pygame.Rect):
-    def __init__(self, x, y, wind, speed, acceleration):
+    def __init__(self, x, y, wind, speed, acceleration, color=(0, 0, 0)):
         super().__init__(x, y, 5, 5)
         
-        self.color = pygame.Color(0, 0, 0)
+        self.color = pygame.Color(*color)
         self.x_speed = wind
         self.y_speed = speed
         self.killed = False
